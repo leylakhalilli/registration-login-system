@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: create table role
+      author: leila
+      changes:
+        - createTable:
+            tableName: role
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: role_name
+                  type: varchar
+
+
+
