@@ -20,6 +20,7 @@ public class UserRegistrationController {
     public String registerUser(@ModelAttribute("user") UserRegistrationDto userRegistrationDto) {
         userService.save(userRegistrationDto);
         return "redirect:/registration?success";
+
     }
 
 }
