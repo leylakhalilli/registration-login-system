@@ -4,6 +4,8 @@ import com.example.registrationlogin.dao.entity.RoleEntity;
 import com.example.registrationlogin.dao.entity.UserEntity;
 import com.example.registrationlogin.dao.repository.UserRepository;
 import com.example.registrationlogin.dto.UserRegistrationDto;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -34,4 +36,8 @@ public class UserServiceImpl implements UserService {
     }
 
 
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return null;
+    }
 }
